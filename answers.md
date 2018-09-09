@@ -1,4 +1,4 @@
-Balance Bank Loans Answers
+## Balance Bank Loans Answers
 
 1. How long did you spend working on the problem? What did you find to be the most difficult part?
 
