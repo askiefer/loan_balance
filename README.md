@@ -10,4 +10,4 @@ python balance_loans.py
 ```
 Optional arguments ``--facilities``, ``--banks``, ``--covenants``, ``--loans``,
 each followed by the file's path. Without these arguments, the default files 
-used are found in loan_balance/data.
+used are found in ``loan_balance/data``.
