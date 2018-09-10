@@ -69,14 +69,16 @@ def get_loan_assignments(args):
 
 
 def get_covenants(filename):
-    dictreader = csv.DictReader(open(fp + filename))
-    covenants = {'{}.{}'.format(row['facility_id'],
-        row['banned_state']): Covenant(row) for row in dictreader}
-    return covenants
+    with open(fp + filename) as infile:
+        dictreader = csv.DictReader(infile)
+        covenants = {'{}.{}'.format(row['facility_id'],
+            row['banned_state']): Covenant(row) for row in dictreader}
+        return covenants
 
 
 def get_facilities(filename):
-    dictreader = csv.DictReader(open(fp + filename))
-    facilities = [Facility(row) for row in dictreader]
-    facilities.sort(key=lambda f: float(f.interest_rate))  # sort by interest rate
-    return facilities
+    with open(fp + filename) as infile:
+        dictreader = csv.DictReader(open(fp + filename))
+        facilities = [Facility(row) for row in dictreader]
+        facilities.sort(key=lambda f: float(f.interest_rate))  # sort by interest rate
+        return facilities
