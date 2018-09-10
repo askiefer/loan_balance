@@ -5,7 +5,7 @@ from loan_balance import driver
 
 INFILES = ('facilities', 'banks', 'covenants', 'loans')
 SUCCESS_MSG = ('\033[92mSuccess! Your loans are now balanced.\n' +
-		  'Look in "/loan_balance/data/" for the "assignments" ' +
+		  'Look in "loan_balance/data/" for the "assignments" ' +
 		  'and "yields" files. \033[0m \n')
 
 def main(args):
