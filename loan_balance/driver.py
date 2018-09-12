@@ -78,7 +78,7 @@ def get_covenants(filename):
 
 def get_facilities(filename):
     with open(fp + filename) as infile:
-        dictreader = csv.DictReader(open(fp + filename))
+        dictreader = csv.DictReader(infile)
         facilities = [Facility(row) for row in dictreader]
         facilities.sort(key=lambda f: float(f.interest_rate))  # sort by interest rate
         return facilities
